@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="bac logo.jpg" alt="BAC Logo" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>BAC</span>');">
+                <span class="logo-text">BAC.</span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -27,59 +29,71 @@
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 40vh; padding: 4rem 20px;">
-        <div class="hero-content fade-in-up">
-            <h1>Comprehensive <span class="highlight-text">Solutions</span></h1>
-            <p>Tailored financial strategies that drive compliance, efficiency, and growth.</p>
+    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
+        <div class="container text-center reveal-up">
+            <h1 style="font-size: 4rem;">Comprehensive <span class="gradient-text">Solutions</span></h1>
+            <p style="margin: 0 auto; max-width: 600px;">Tailored financial strategies that drive compliance, efficiency, and growth.</p>
         </div>
     </header>
 
-    <section class="expertise bg-light">
-        <div class="container fade-in-up">
-            <div class="grid-3">
-                <div class="service-card">
-                    <div class="card-icon">📈</div>
-                    <h3>Tax Planning & Compliance</h3>
-                    <p>Proactive tax strategies to optimize your corporate tax position while ensuring strict adherence to FIRS regulations.</p>
+    <section class="expertise" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="grid-3 stagger-group">
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">01</h3>
+                        <h3 style="font-size: 1.5rem;">Tax Planning & Compliance</h3>
+                        <p>Proactive tax strategies to optimize your corporate tax position while ensuring strict adherence to FIRS regulations.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">🔍</div>
-                    <h3>Statutory Audit</h3>
-                    <p>Thorough, independent examinations of your financial statements to provide stakeholders with absolute assurance.</p>
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">02</h3>
+                        <h3 style="font-size: 1.5rem;">Statutory Audit</h3>
+                        <p>Thorough, independent examinations of your financial statements to provide stakeholders with absolute assurance.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">💼</div>
-                    <h3>Financial Advisory</h3>
-                    <p>Strategic modeling, risk assessment, and capital structure advisory for mergers, acquisitions, and expansions.</p>
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">03</h3>
+                        <h3 style="font-size: 1.5rem;">Financial Advisory</h3>
+                        <p>Strategic modeling, risk assessment, and capital structure advisory for mergers, acquisitions, and expansions.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Bookkeeping & Accounting</h3>
-                    <p>Accurate, timely ledger management and financial reporting to give you a clear picture of your daily operations.</p>
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">04</h3>
+                        <h3 style="font-size: 1.5rem;">Bookkeeping & Accounting</h3>
+                        <p>Accurate, timely ledger management and financial reporting to give you a clear picture of your daily operations.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Risk Management</h3>
-                    <p>Identifying internal vulnerabilities and implementing robust control systems to safeguard corporate assets.</p>
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">05</h3>
+                        <h3 style="font-size: 1.5rem;">Risk Management</h3>
+                        <p>Identifying internal vulnerabilities and implementing robust control systems to safeguard corporate assets.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">🤝</div>
-                    <h3>Corporate Governance</h3>
-                    <p>Assisting boards and executives in establishing frameworks that ensure transparency and accountability.</p>
+                <div class="service-card glass-card stagger-element">
+                    <div class="card-content">
+                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">06</h3>
+                        <h3 style="font-size: 1.5rem;">Corporate Governance</h3>
+                        <p>Assisting boards and executives in establishing frameworks that ensure transparency and accountability.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="modern-footer">
         <div class="container footer-content">
             <div class="footer-info">
-                <h4>Bunmi Adelugba & Co.</h4>
-                <p>Chartered Accountants & Tax Practitioners</p>
+                <span class="logo-text">BAC.</span>
+                <p>Transforming complex financials into clear, strategic growth paths.</p>
             </div>
             <div class="footer-contact">
-                <p>Email: adelugbaadejare03@gmail.com</p>
-                <p>Location: Abuja, Nigeria</p>
+                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
             </div>
         </div>
         <div class="footer-bottom">

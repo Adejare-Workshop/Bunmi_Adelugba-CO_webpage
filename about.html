@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="bac logo.jpg" alt="BAC Logo" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>BAC</span>');">
+                <span class="logo-text">BAC.</span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -27,38 +29,40 @@
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 40vh; padding: 4rem 20px;">
-        <div class="hero-content fade-in-up">
-            <h1>About <span class="highlight-text">Our Firm</span></h1>
-            <p>Decades of collective experience delivering uncompromising financial integrity.</p>
+    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
+        <div class="container text-center reveal-up">
+            <h1 style="font-size: 4rem;">About <span class="gradient-text">Our Firm</span></h1>
+            <p style="margin: 0 auto; max-width: 600px;">Decades of collective experience delivering uncompromising financial integrity.</p>
         </div>
     </header>
 
-    <section class="philosophy">
-        <div class="container fade-in-up">
-            <div class="grid-2" style="align-items: center;">
-                <div class="about-text">
-                    <h2 class="section-title" style="text-align: left;">Rooted in Excellence</h2>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">Bunmi Adelugba & Co. was established with a singular vision: to elevate the standard of financial reporting, tax planning, and corporate advisory in Nigeria.</p>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">We partner with businesses of all sizes, from emerging startups to established corporations, providing the clarity and strategic foresight necessary to navigate complex financial landscapes.</p>
-                    <a href="contact.html" class="btn btn-primary">Partner With Us</a>
-                </div>
-                <div class="about-image" style="background: var(--bg-light); border-radius: 12px; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0;">
-                    <span style="color: var(--text-light);">[Premium Firm Image/Graphic placeholder]</span>
+    <section class="expertise" style="padding-top: 2rem;">
+        <div class="container reveal-up">
+            <div class="glass-panel" style="padding: 4rem;">
+                <div class="grid-2" style="align-items: center; gap: 4rem;">
+                    <div class="about-text">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Rooted in <span class="gradient-text">Excellence</span></h2>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.1rem;">Bunmi Adelugba & Co. was established with a singular vision: to elevate the standard of financial reporting, tax planning, and corporate advisory in Nigeria.</p>
+                        <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">We partner with businesses of all sizes, from emerging startups to established corporations, providing the clarity and strategic foresight necessary to navigate complex financial landscapes.</p>
+                        <a href="contact.html" class="btn btn-primary magnetic" data-strength="15">Partner With Us</a>
+                    </div>
+                    <div class="image-wrapper hover-shine" style="border-radius: 12px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Office">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
+    <footer class="modern-footer">
+        <div class="container footer-content reveal-up">
             <div class="footer-info">
-                <h4>Bunmi Adelugba & Co.</h4>
-                <p>Chartered Accountants & Tax Practitioners</p>
+                <span class="logo-text">BAC.</span>
+                <p>Transforming complex financials into clear, strategic growth paths.</p>
             </div>
             <div class="footer-contact">
-                <p>Email: adelugbaadejare03@gmail.com</p>
-                <p>Location: Abuja, Nigeria</p>
+                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
             </div>
         </div>
         <div class="footer-bottom">

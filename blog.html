@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights & Blog | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="bac logo.jpg" alt="BAC Logo" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>BAC</span>');">
+                <span class="logo-text">BAC.</span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -27,58 +29,58 @@
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 40vh; padding: 4rem 20px;">
-        <div class="hero-content fade-in-up">
-            <h1>Industry <span class="highlight-text">Insights</span></h1>
-            <p>Latest updates, regulatory changes, and financial strategies from our experts.</p>
+    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
+        <div class="container text-center reveal-up">
+            <h1 style="font-size: 4rem;">Industry <span class="gradient-text">Insights</span></h1>
+            <p style="margin: 0 auto; max-width: 600px;">Latest updates, regulatory changes, and financial strategies from our experts.</p>
         </div>
     </header>
 
-    <section class="expertise bg-light">
-        <div class="container fade-in-up">
-            <div class="grid-3">
-                <article class="service-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="height: 200px; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white;">[Image Placeholder]</div>
-                    <div style="padding: 1.5rem; flex-grow: 1;">
-                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 600; text-transform: uppercase;">Tax Updates</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Navigating the 2026 FIRS Compliance Guidelines</h3>
+    <section class="expertise" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="grid-3 stagger-group">
+                <article class="service-card glass-card stagger-element hover-shine">
+                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tax" class="card-img">
+                    <div class="card-content">
+                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Tax Updates</span>
+                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Navigating the 2026 FIRS Guidelines</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1rem;">A breakdown of the recent changes to corporate tax filings and what it means for your business.</p>
-                        <a href="#" style="font-weight: 600; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color);">Read More</a>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
                 </article>
 
-                <article class="service-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="height: 200px; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white;">[Image Placeholder]</div>
-                    <div style="padding: 1.5rem; flex-grow: 1;">
-                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 600; text-transform: uppercase;">Audit & Assurance</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">The Importance of Internal Audits for Startups</h3>
+                <article class="service-card glass-card stagger-element hover-shine">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audit" class="card-img">
+                    <div class="card-content">
+                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Audit & Assurance</span>
+                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Internal Audits for Startups</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1rem;">Why early-stage companies shouldn't wait until their first major funding round to organize their books.</p>
-                        <a href="#" style="font-weight: 600; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color);">Read More</a>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
                 </article>
 
-                <article class="service-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="height: 200px; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white;">[Image Placeholder]</div>
-                    <div style="padding: 1.5rem; flex-grow: 1;">
-                        <span style="font-size: 0.8rem; color: var(--secondary-color); font-weight: 600; text-transform: uppercase;">Strategy</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Cash Flow Modeling in a Volatile Economy</h3>
+                <article class="service-card glass-card stagger-element hover-shine">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Strategy" class="card-img">
+                    <div class="card-content">
+                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Strategy</span>
+                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Cash Flow in a Volatile Economy</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1rem;">Strategies for building resilient financial models that can withstand macroeconomic shifts.</p>
-                        <a href="#" style="font-weight: 600; color: var(--primary-color); border-bottom: 2px solid var(--secondary-color);">Read More</a>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="modern-footer">
         <div class="container footer-content">
             <div class="footer-info">
-                <h4>Bunmi Adelugba & Co.</h4>
-                <p>Chartered Accountants & Tax Practitioners</p>
+                <span class="logo-text">BAC.</span>
+                <p>Transforming complex financials into clear, strategic growth paths.</p>
             </div>
             <div class="footer-contact">
-                <p>Email: adelugbaadejare03@gmail.com</p>
-                <p>Location: Abuja, Nigeria</p>
+                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
             </div>
         </div>
         <div class="footer-bottom">

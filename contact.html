@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="bac logo.jpg" alt="BAC Logo" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>BAC</span>');">
+                <span class="logo-text">BAC.</span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -27,38 +29,38 @@
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 40vh; padding: 4rem 20px;">
-        <div class="hero-content fade-in-up">
-            <h1>Start a <span class="highlight-text">Conversation</span></h1>
-            <p>Reach out to discuss how we can secure and elevate your financial standing.</p>
+    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
+        <div class="container text-center reveal-up">
+            <h1 style="font-size: 4rem;">Start a <span class="gradient-text">Conversation</span></h1>
+            <p style="margin: 0 auto; max-width: 600px;">Reach out to discuss how we can secure and elevate your financial standing.</p>
         </div>
     </header>
 
-    <section class="expertise bg-light" style="padding: 4rem 20px;">
-        <div class="container fade-in-up">
-            <div class="grid-2">
+    <section class="expertise" style="padding-top: 2rem;">
+        <div class="container reveal-up">
+            <div class="grid-2" style="gap: 4rem;">
                 
-                <div class="contact-info" style="padding-right: 2rem;">
-                    <h2 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">Get In Touch</h2>
+                <div class="contact-info glass-panel" style="padding: 3rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Get In Touch</h2>
                     <p style="color: var(--text-light); margin-bottom: 2rem;">Whether you need comprehensive audit services or strategic tax planning, our team is ready to assist you.</p>
                     
                     <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">📍 Office Location</h4>
-                        <p style="color: var(--text-light);">Abuja, Nigeria</p>
+                        <h4 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.25rem;">📍 Office Location</h4>
+                        <p style="color: var(--text-dark);">Abuja, Nigeria</p>
                     </div>
                     
                     <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">✉️ Email Address</h4>
-                        <p style="color: var(--text-light);">adelugbaadejare03@gmail.com</p>
+                        <h4 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.25rem;">✉️ Email Address</h4>
+                        <p style="color: var(--text-dark);">adelugbaadejare03@gmail.com</p>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">🕒 Operating Hours</h4>
-                        <p style="color: var(--text-light);">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <h4 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.25rem;">🕒 Operating Hours</h4>
+                        <p style="color: var(--text-dark);">Monday - Friday: 8:00 AM - 5:00 PM</p>
                     </div>
                 </div>
 
-                <div class="contact-form-container" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+                <div class="contact-form-container glass-panel" style="padding: 3rem;">
                     <form id="bac-contact-form">
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -86,7 +88,7 @@
                             <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-btn">Send Message</button>
+                        <button type="submit" class="btn btn-primary magnetic" data-strength="10" style="width: 100%;" id="submit-btn">Send Message</button>
                         <div id="form-status" style="margin-top: 1rem; text-align: center; font-weight: 600; display: none;"></div>
                     </form>
                 </div>
@@ -95,15 +97,15 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="modern-footer">
         <div class="container footer-content">
             <div class="footer-info">
-                <h4>Bunmi Adelugba & Co.</h4>
-                <p>Chartered Accountants & Tax Practitioners</p>
+                <span class="logo-text">BAC.</span>
+                <p>Transforming complex financials into clear, strategic growth paths.</p>
             </div>
             <div class="footer-contact">
-                <p>Email: adelugbaadejare03@gmail.com</p>
-                <p>Location: Abuja, Nigeria</p>
+                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
+                <p><strong>Location:</strong> Abuja, Nigeria</p>
             </div>
         </div>
         <div class="footer-bottom">
