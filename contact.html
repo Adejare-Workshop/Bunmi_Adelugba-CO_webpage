@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bunmi Adelugba & Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="bac logo.jpg" alt="BAC Logo" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span>BAC</span>');">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 40vh; padding: 4rem 20px;">
+        <div class="hero-content fade-in-up">
+            <h1>Start a <span class="highlight-text">Conversation</span></h1>
+            <p>Reach out to discuss how we can secure and elevate your financial standing.</p>
+        </div>
+    </header>
+
+    <section class="expertise bg-light" style="padding: 4rem 20px;">
+        <div class="container fade-in-up">
+            <div class="grid-2">
+                
+                <div class="contact-info" style="padding-right: 2rem;">
+                    <h2 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">Get In Touch</h2>
+                    <p style="color: var(--text-light); margin-bottom: 2rem;">Whether you need comprehensive audit services or strategic tax planning, our team is ready to assist you.</p>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">📍 Office Location</h4>
+                        <p style="color: var(--text-light);">Abuja, Nigeria</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">✉️ Email Address</h4>
+                        <p style="color: var(--text-light);">adelugbaadejare03@gmail.com</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); font-size: 1.1rem;">🕒 Operating Hours</h4>
+                        <p style="color: var(--text-light);">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+                    <form id="bac-contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@company.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="tax">Tax Advisory</option>
+                                <option value="audit">Audit & Assurance</option>
+                                <option value="advisory">Financial Strategy</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-btn">Send Message</button>
+                        <div id="form-status" style="margin-top: 1rem; text-align: center; font-weight: 600; display: none;"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>Bunmi Adelugba & Co.</h4>
+                <p>Chartered Accountants & Tax Practitioners</p>
+            </div>
+            <div class="footer-contact">
+                <p>Email: adelugbaadejare03@gmail.com</p>
+                <p>Location: Abuja, Nigeria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bunmi Adelugba & Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
