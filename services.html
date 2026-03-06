@@ -1,106 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Bunmi Adelugba & Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <canvas id="bg-canvas"></canvas>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
-    <nav class="navbar glass-nav">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">BAC.</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">BAC<span>.</span></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="blog.html">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Engage Us</a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
-        <div class="container text-center reveal-up">
-            <h1 style="font-size: 4rem;">Comprehensive <span class="gradient-text">Solutions</span></h1>
-            <p style="margin: 0 auto; max-width: 600px;">Tailored financial strategies that drive compliance, efficiency, and growth.</p>
-        </div>
-    </header>
+  <div class="nav-mobile-overlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="blog.html">Insights</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <section class="expertise" style="padding-top: 2rem;">
-        <div class="container">
-            <div class="grid-3 stagger-group">
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">01</h3>
-                        <h3 style="font-size: 1.5rem;">Tax Planning & Compliance</h3>
-                        <p>Proactive tax strategies to optimize your corporate tax position while ensuring strict adherence to FIRS regulations.</p>
-                    </div>
-                </div>
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">02</h3>
-                        <h3 style="font-size: 1.5rem;">Statutory Audit</h3>
-                        <p>Thorough, independent examinations of your financial statements to provide stakeholders with absolute assurance.</p>
-                    </div>
-                </div>
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">03</h3>
-                        <h3 style="font-size: 1.5rem;">Financial Advisory</h3>
-                        <p>Strategic modeling, risk assessment, and capital structure advisory for mergers, acquisitions, and expansions.</p>
-                    </div>
-                </div>
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">04</h3>
-                        <h3 style="font-size: 1.5rem;">Bookkeeping & Accounting</h3>
-                        <p>Accurate, timely ledger management and financial reporting to give you a clear picture of your daily operations.</p>
-                    </div>
-                </div>
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">05</h3>
-                        <h3 style="font-size: 1.5rem;">Risk Management</h3>
-                        <p>Identifying internal vulnerabilities and implementing robust control systems to safeguard corporate assets.</p>
-                    </div>
-                </div>
-                <div class="service-card glass-card stagger-element">
-                    <div class="card-content">
-                        <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 1rem;">06</h3>
-                        <h3 style="font-size: 1.5rem;">Corporate Governance</h3>
-                        <p>Assisting boards and executives in establishing frameworks that ensure transparency and accountability.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div style="position:relative; background: var(--surface); border-bottom: 1px solid var(--border);">
+    <div class="page-hero">
+      <div class="page-hero-num">02</div>
+      <div class="section-label reveal">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">What We Offer</span>
+      </div>
+      <h1 class="page-hero-title reveal" data-delay="2">Comprehensive<br><em>Solutions</em></h1>
+      <p class="page-hero-sub reveal" data-delay="3">
+        Tailored financial strategies that drive compliance, efficiency, and growth across every stage of your business.
+      </p>
+    </div>
+  </div>
 
-    <footer class="modern-footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <span class="logo-text">BAC.</span>
-                <p>Transforming complex financials into clear, strategic growth paths.</p>
-            </div>
-            <div class="footer-contact">
-                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
-                <p><strong>Location:</strong> Abuja, Nigeria</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Bunmi Adelugba & Co. All rights reserved.</p>
-        </div>
-    </footer>
+  <div class="page-divider"></div>
 
-    <script src="main.js"></script>
+  <section class="section">
+    <div class="section-inner">
+      <div class="services-grid">
+        <div class="service-tile reveal" data-delay="1">
+          <span class="service-tile-num">01</span>
+          <h3 class="service-tile-title">Tax Planning & Compliance</h3>
+          <p class="service-tile-desc">Proactive tax strategies to optimise your corporate tax position while ensuring strict adherence to FIRS regulations and avoiding penalties.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="service-tile reveal" data-delay="2">
+          <span class="service-tile-num">02</span>
+          <h3 class="service-tile-title">Statutory Audit</h3>
+          <p class="service-tile-desc">Thorough, independent examinations of your financial statements providing stakeholders with absolute assurance and regulatory compliance.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="service-tile reveal" data-delay="3">
+          <span class="service-tile-num">03</span>
+          <h3 class="service-tile-title">Financial Advisory</h3>
+          <p class="service-tile-desc">Strategic modeling, risk assessment, and capital structure advisory for mergers, acquisitions, fundraising, and business expansions.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="service-tile reveal" data-delay="1">
+          <span class="service-tile-num">04</span>
+          <h3 class="service-tile-title">Bookkeeping & Accounting</h3>
+          <p class="service-tile-desc">Accurate, timely ledger management and financial reporting to give you a crystal-clear picture of your business operations day by day.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="service-tile reveal" data-delay="2">
+          <span class="service-tile-num">05</span>
+          <h3 class="service-tile-title">Risk Management</h3>
+          <p class="service-tile-desc">Identifying internal vulnerabilities and implementing robust internal control systems to safeguard your corporate assets and reputation.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="service-tile reveal" data-delay="3">
+          <span class="service-tile-num">06</span>
+          <h3 class="service-tile-title">Corporate Governance</h3>
+          <p class="service-tile-desc">Assisting boards and executives in establishing transparent governance frameworks that build long-term stakeholder trust.</p>
+          <div class="service-tile-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="margin-top: 100px; padding: 80px; border: 1px solid var(--border); text-align: center;" class="reveal">
+        <div class="section-label" style="justify-content: center; margin-bottom: 24px;">
+          <div class="section-label-line"></div>
+          <span class="section-label-text">Ready to Begin?</span>
+          <div class="section-label-line"></div>
+        </div>
+        <h2 class="section-title" style="margin-bottom: 20px;">Let's Build Your <em>Financial Future</em></h2>
+        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto;">
+          Every client relationship begins with a conversation. Reach out to discuss how we can serve your financial needs.
+        </p>
+        <a href="contact.html" class="btn-primary-gold">
+          <span>Start a Conversation</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">BAC<span>.</span></div>
+          <p class="footer-tagline">Transforming complex financials into clear, strategic growth paths.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <p class="footer-contact-item">adelugbaadejare03@gmail.com</p>
+          <p class="footer-contact-item">Abuja, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Bunmi Adelugba & Co. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

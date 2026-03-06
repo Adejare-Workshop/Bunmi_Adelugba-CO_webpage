@@ -1,93 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & Blog | Bunmi Adelugba & Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights | Bunmi Adelugba & Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <canvas id="bg-canvas"></canvas>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
-    <nav class="navbar glass-nav">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">BAC.</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">BAC<span>.</span></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Insights</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Engage Us</a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-mobile-overlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html" class="active">Insights</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div style="position:relative; background: var(--surface); border-bottom: 1px solid var(--border);">
+    <div class="page-hero">
+      <div class="page-hero-num">03</div>
+      <div class="section-label reveal">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Expert Perspectives</span>
+      </div>
+      <h1 class="page-hero-title reveal" data-delay="2">Industry<br><em>Insights</em></h1>
+      <p class="page-hero-sub reveal" data-delay="3">
+        Latest regulatory updates, financial strategies, and expert commentary from the BAC team.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-divider"></div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="insights-grid">
+      <div class="insight-card reveal">
+        <div class="insight-img-wrap">
+          <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tax">
         </div>
-    </nav>
-
-    <header class="hero" style="min-height: 40vh; align-items: flex-end; padding-bottom: 4rem;">
-        <div class="container text-center reveal-up">
-            <h1 style="font-size: 4rem;">Industry <span class="gradient-text">Insights</span></h1>
-            <p style="margin: 0 auto; max-width: 600px;">Latest updates, regulatory changes, and financial strategies from our experts.</p>
+        <div class="insight-body">
+          <span class="insight-tag">Tax Updates</span>
+          <h3 class="insight-title">Navigating the 2026 FIRS Guidelines</h3>
+          <p class="insight-excerpt">A comprehensive breakdown of the recent changes to corporate tax filings and what it means for your business going forward into the new financial year.</p>
+          <a href="#" class="insight-read-more">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-    </header>
+      </div>
 
-    <section class="expertise" style="padding-top: 2rem;">
-        <div class="container">
-            <div class="grid-3 stagger-group">
-                <article class="service-card glass-card stagger-element hover-shine">
-                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tax" class="card-img">
-                    <div class="card-content">
-                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Tax Updates</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Navigating the 2026 FIRS Guidelines</h3>
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">A breakdown of the recent changes to corporate tax filings and what it means for your business.</p>
-                        <a href="#" class="read-more">Read Article &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="service-card glass-card stagger-element hover-shine">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audit" class="card-img">
-                    <div class="card-content">
-                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Audit & Assurance</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Internal Audits for Startups</h3>
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Why early-stage companies shouldn't wait until their first major funding round to organize their books.</p>
-                        <a href="#" class="read-more">Read Article &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="service-card glass-card stagger-element hover-shine">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Strategy" class="card-img">
-                    <div class="card-content">
-                        <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase;">Strategy</span>
-                        <h3 style="margin: 0.5rem 0; font-size: 1.2rem;">Cash Flow in a Volatile Economy</h3>
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Strategies for building resilient financial models that can withstand macroeconomic shifts.</p>
-                        <a href="#" class="read-more">Read Article &rarr;</a>
-                    </div>
-                </article>
-            </div>
+      <div class="insight-card reveal" data-delay="2">
+        <div class="insight-img-wrap">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Audit">
         </div>
-    </section>
-
-    <footer class="modern-footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <span class="logo-text">BAC.</span>
-                <p>Transforming complex financials into clear, strategic growth paths.</p>
-            </div>
-            <div class="footer-contact">
-                <p><strong>Email:</strong> adelugbaadejare03@gmail.com</p>
-                <p><strong>Location:</strong> Abuja, Nigeria</p>
-            </div>
+        <div class="insight-body">
+          <span class="insight-tag">Audit & Assurance</span>
+          <h3 class="insight-title">Internal Audits for Startups</h3>
+          <p class="insight-excerpt">Why early-stage companies shouldn't wait until their first major funding round to organise their books — and how to start right from day one.</p>
+          <a href="#" class="insight-read-more">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Bunmi Adelugba & Co. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
 
-    <script src="main.js"></script>
+      <div class="insight-card reveal" data-delay="4">
+        <div class="insight-img-wrap">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Strategy">
+        </div>
+        <div class="insight-body">
+          <span class="insight-tag">Strategy</span>
+          <h3 class="insight-title">Cash Flow in a Volatile Economy</h3>
+          <p class="insight-excerpt">Strategies for building resilient financial models that can withstand macroeconomic shifts in the Nigerian and broader West African market.</p>
+          <a href="#" class="insight-read-more">
+            Read Article
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">BAC<span>.</span></div>
+          <p class="footer-tagline">Transforming complex financials into clear, strategic growth paths.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <p class="footer-contact-item">adelugbaadejare03@gmail.com</p>
+          <p class="footer-contact-item">Abuja, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Bunmi Adelugba & Co. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
