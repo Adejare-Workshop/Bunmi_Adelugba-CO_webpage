@@ -6,41 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =========================================
-     CUSTOM CURSOR
-  ========================================= */
-  const cursorDot = document.querySelector('.cursor-dot');
-  const cursorRing = document.querySelector('.cursor-ring');
-
-  if (cursorDot && cursorRing && window.innerWidth > 768) {
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorDot.style.left = mouseX + 'px';
-      cursorDot.style.top = mouseY + 'px';
-    });
-
-    // Ring follows with lag
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      cursorRing.style.left = ringX + 'px';
-      cursorRing.style.top = ringY + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    // Hover state on interactive elements
-    const hoverTargets = document.querySelectorAll('a, button, .service-tile, .insight-card, .value-item, .metric-item');
-    hoverTargets.forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-  }
-
-  /* =========================================
      NAVIGATION: SCROLL & MOBILE
   ========================================= */
   const nav = document.querySelector('.site-nav');
@@ -100,6 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
   revealEls.forEach(el => revealObserver.observe(el));
+
+  // Reveal groups (staggered children)
+  document.querySelectorAll('.reveal-group').forEach(el => revealObserver.observe(el));
 
   /* =========================================
      COUNTER ANIMATION

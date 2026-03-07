@@ -9,18 +9,19 @@
    1. DESIGN TOKENS
    ========================================= */
 :root {
-  --ink: #0A0A0B;
-  --ink-soft: #111114;
-  --surface: #14141A;
-  --surface-raise: #1C1C26;
-  --border: rgba(255,255,255,0.07);
-  --border-active: rgba(183,154,108,0.5);
-  --gold: #B79A6C;
-  --gold-light: #D4B98A;
-  --gold-pale: rgba(183,154,108,0.12);
-  --text: #E8E4DC;
-  --text-muted: rgba(232,228,220,0.45);
-  --text-dim: rgba(232,228,220,0.25);
+  --ink: #0D0810;          /* Very deep plum-black base */
+  --ink-soft: #140A14;
+  --surface: #1E0F1A;      /* Deep burgundy surface — hero headers, alt sections */
+  --surface-raise: #2A1222; /* Lifted burgundy — cards, panels, metrics */
+  --burgundy: #5C1A2E;     /* Mid burgundy accent for borders & highlights */
+  --border: rgba(255,255,255,0.09);
+  --border-active: rgba(229,193,88,0.55);
+  --gold: #C59B27;
+  --gold-light: #E5C158;
+  --gold-pale: rgba(229,193,88,0.09);
+  --text: #F5F0EC;         /* Warm white — high legibility on dark */
+  --text-muted: rgba(245,240,236,0.58);
+  --text-dim: rgba(245,240,236,0.30);
   --white: #FFFFFF;
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -42,44 +43,16 @@ body {
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
-  cursor: none;
 }
 
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
-button { cursor: none; font-family: inherit; }
+button { cursor: pointer; font-family: inherit; }
 
 /* =========================================
    3. CUSTOM CURSOR
    ========================================= */
-.cursor-dot {
-  position: fixed;
-  top: 0; left: 0;
-  width: 8px; height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s;
-  will-change: transform;
-}
 
-.cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  width: 36px; height: 36px;
-  border: 1px solid rgba(183,154,108,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s var(--ease-expo), height 0.4s var(--ease-expo), border-color 0.3s;
-  will-change: transform;
-}
-
-body.cursor-hover .cursor-dot { width: 12px; height: 12px; }
-body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: var(--gold); }
 
 /* =========================================
    4. SCROLLBAR
@@ -114,7 +87,7 @@ body::before {
 
 .site-nav.scrolled {
   padding: 18px 0;
-  background: rgba(10,10,11,0.92);
+  background: rgba(13,8,16,0.96);
   backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border);
 }
@@ -129,16 +102,13 @@ body::before {
 }
 
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
-  font-weight: 300;
-  letter-spacing: 0.12em;
-  color: var(--text);
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
-.nav-logo span {
-  color: var(--gold);
+.nav-logo svg {
+  display: block;
 }
 
 .nav-menu {
@@ -547,7 +517,6 @@ body::before {
   position: relative;
   overflow: hidden;
   transition: background 0.5s;
-  cursor: none;
 }
 
 .service-tile:nth-child(3n) { border-right: none; }
@@ -626,7 +595,7 @@ body::before {
    ========================================= */
 .about-strip {
   padding: 140px 0;
-  background: var(--surface);
+  background: var(--surface-raise);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -695,7 +664,6 @@ body::before {
   background: var(--ink);
   overflow: hidden;
   position: relative;
-  cursor: none;
   group: true;
 }
 
@@ -1042,7 +1010,6 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  cursor: none;
   transition: background 0.3s, transform 0.2s;
   margin-top: 8px;
   border-radius: 2px;
@@ -1070,6 +1037,7 @@ body::before {
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 80px 0 40px;
+  background: var(--surface);
 }
 
 .footer-inner {
@@ -1088,14 +1056,13 @@ body::before {
 }
 
 .footer-brand-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0.08em;
   margin-bottom: 16px;
+  line-height: 1;
 }
 
-.footer-brand-name span { color: var(--gold); }
+.footer-brand-name svg {
+  display: block;
+}
 
 .footer-tagline {
   font-size: 0.88rem;
@@ -1312,7 +1279,285 @@ body::before {
   .footer-top { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .page-hero-num { display: none; }
-  .cursor-dot, .cursor-ring { display: none; }
   body { cursor: auto; }
   button { cursor: pointer; }
+}
+/* =========================================
+   FOUNDER SECTION
+   ========================================= */
+.founder-section {
+  padding: 120px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.founder-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.founder-img-wrap {
+  position: relative;
+}
+
+.founder-img-wrap img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: saturate(0.7) brightness(0.85);
+  transition: filter 0.6s;
+}
+
+.founder-img-wrap:hover img {
+  filter: saturate(0.85) brightness(0.95);
+}
+
+.founder-img-frame {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--burgundy);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.founder-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(13,8,16,0.95), transparent);
+}
+
+.founder-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.founder-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.founder-content {
+  padding-top: 20px;
+}
+
+.founder-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.founder-bio {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.founder-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2.5rem;
+}
+
+.credential-badge {
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.credential-badge:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+/* =========================================
+   SERVICE IMAGE CARDS (enhanced)
+   ========================================= */
+.service-img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  margin-bottom: 2px;
+}
+
+.service-img-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-img-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: saturate(0.4) brightness(0.6);
+  transform: scale(1.05);
+  transition: transform 0.8s var(--ease-expo), filter 0.6s;
+  display: block;
+}
+
+.service-img-card:hover img {
+  transform: scale(1);
+  filter: saturate(0.7) brightness(0.75);
+}
+
+.service-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,8,16,0.9) 0%, rgba(13,8,16,0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px 24px;
+}
+
+.service-img-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.service-img-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* =========================================
+   ENHANCED ANIMATIONS
+   ========================================= */
+
+/* Fade in from bottom with blur */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(4px);
+  transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo), filter 0.7s;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger children of a .reveal-group */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-expo), transform 0.7s var(--ease-expo);
+}
+.reveal-group.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:0s; }
+.reveal-group.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:0.12s; }
+.reveal-group.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:0.24s; }
+.reveal-group.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:0.36s; }
+.reveal-group.visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:0.48s; }
+.reveal-group.visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:0.60s; }
+
+/* Horizontal line sweep animation on section labels */
+.section-label-line {
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 1s var(--ease-expo);
+}
+.visible .section-label-line,
+.reveal.visible .section-label-line,
+.section-label .section-label-line {
+  width: 30px;
+}
+
+/* Gold underline sweep on hero h1 */
+.hero-h1 {
+  position: relative;
+}
+
+/* Metric item gold bar sweep */
+.metric-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width 0.8s var(--ease-expo);
+}
+.metric-item:hover::before,
+.metric-item.visible::before { width: 100%; }
+
+/* Service tile shimmer on hover */
+.service-tile {
+  transition: background 0.5s, transform 0.4s var(--ease-expo);
+}
+
+/* Insight card lift */
+.insight-card {
+  transition: transform 0.5s var(--ease-expo);
+}
+.insight-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Scroll indicator pulse */
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1.15); transform-origin: top; }
+}
+
+/* About strip burgundy overlay */
+.about-strip {
+  background: var(--surface-raise);
+}
+
+/* Burgundy accent line on page hero */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), var(--burgundy));
+}
+
+/* =========================================
+   RESPONSIVE — FOUNDER
+   ========================================= */
+@media (max-width: 1100px) {
+  .founder-inner { grid-template-columns: 1fr; gap: 60px; }
+  .founder-img-wrap { max-width: 360px; }
+  .service-img-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .founder-inner { padding: 0 28px; }
+  .service-img-grid { grid-template-columns: 1fr; }
 }
