@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0D0810">
   <title>Our Services | Bunmi Adelugba & Co.</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -18,19 +19,18 @@
         <li><a href="blog.html">Insights</a></li>
       </ul>
       <a href="contact.html" class="nav-cta">Engage Us</a>
-      <button class="hamburger" aria-label="Menu">
+      <button class="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
-  <div class="nav-mobile-overlay">
+  <div class="nav-mobile-overlay" role="dialog" aria-label="Navigation menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html" class="active">Services</a>
     <a href="blog.html">Insights</a>
     <a href="contact.html">Contact</a>
   </div>
-
   <div style="position:relative;background:var(--surface);border-bottom:1px solid var(--border);">
     <div class="page-hero">
       <div class="page-hero-num">02</div>
@@ -41,32 +41,49 @@
   </div>
   <div class="page-divider"></div>
 
-  <!-- Photo showcase at top -->
-  <div class="service-img-grid reveal-group" style="margin-bottom:0;">
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tax">
-      <div class="service-img-overlay"><span class="service-img-label">Tax Planning</span><h3 class="service-img-title">Strategic Tax Advisory</h3></div>
-    </div>
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Audit">
-      <div class="service-img-overlay"><span class="service-img-label">Audit</span><h3 class="service-img-title">Statutory Audit &amp; Assurance</h3></div>
-    </div>
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Strategy">
-      <div class="service-img-overlay"><span class="service-img-label">Advisory</span><h3 class="service-img-title">Financial Strategy</h3></div>
-    </div>
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bookkeeping">
-      <div class="service-img-overlay"><span class="service-img-label">Operations</span><h3 class="service-img-title">Bookkeeping &amp; Accounting</h3></div>
-    </div>
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Risk">
-      <div class="service-img-overlay"><span class="service-img-label">Risk</span><h3 class="service-img-title">Risk Management</h3></div>
-    </div>
-    <div class="service-img-card">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Governance">
-      <div class="service-img-overlay"><span class="service-img-label">Governance</span><h3 class="service-img-title">Corporate Governance</h3></div>
-    </div>
+  <div class="service-img-grid reveal-group">
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tax">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Tax Planning</span>
+          <h3 class="service-img-title">Strategic Tax Advisory</h3>
+        </div>
+      </div>
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Audit">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Audit</span>
+          <h3 class="service-img-title">Statutory Audit &amp; Assurance</h3>
+        </div>
+      </div>
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Strategy">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Advisory</span>
+          <h3 class="service-img-title">Financial Strategy</h3>
+        </div>
+      </div>
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bookkeeping">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Operations</span>
+          <h3 class="service-img-title">Bookkeeping &amp; Accounting</h3>
+        </div>
+      </div>
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Risk">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Risk</span>
+          <h3 class="service-img-title">Risk Management</h3>
+        </div>
+      </div>
+      <div class="service-img-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Governance">
+        <div class="service-img-overlay">
+          <span class="service-img-label">Governance</span>
+          <h3 class="service-img-title">Corporate Governance</h3>
+        </div>
+      </div>
   </div>
 
   <section class="section">
@@ -109,7 +126,8 @@
           <div class="service-tile-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </div>
-      <div style="margin-top:100px;padding:80px;border:1px solid var(--border);text-align:center;" class="reveal">
+
+      <div style="margin-top:100px;padding:80px 40px;border:1px solid var(--border);text-align:center;" class="reveal">
         <div class="section-label" style="justify-content:center;margin-bottom:24px;"><div class="section-label-line"></div><span class="section-label-text">Ready to Begin?</span><div class="section-label-line"></div></div>
         <h2 class="section-title" style="margin-bottom:20px;">Let&rsquo;s Build Your <em>Financial Future</em></h2>
         <p style="font-size:1rem;color:var(--text-muted);margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto;">Every client relationship begins with a conversation. Reach out to discuss how we can serve your financial needs.</p>
@@ -137,8 +155,6 @@
         </div>
         <div>
           <div class="footer-col-title">Contact</div>
-          <p class="footer-contact-item">adelugbaadejare03@gmail.com</p>
-          <p class="footer-contact-item">Abuja, Nigeria</p>
           <p class="footer-contact-item">badecharteredaccts.ng@gmail.com</p>
           <p class="footer-contact-item">Plot 6, Ekikunam Street, Utako, Abuja.</p>
           <p class="footer-contact-item">Mon &ndash; Fri: 8:00 AM &ndash; 5:00 PM</p>
